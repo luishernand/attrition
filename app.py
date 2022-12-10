@@ -16,8 +16,8 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # 	Carga de modelos			  #
 #---------------------------------#
 
-reg = joblib.load('C:\\Users\\lh1259\\Documents\\Projectos\\Attrition\\TDC\\modelo_regression')
-classifier = joblib.load('C:\\Users\\lh1259\\Documents\\Projectos\\Attrition\\TDC\\modelo_XGB')
+#reg = joblib.load('modelo_regression')
+#classifier = joblib.load('modelo_XGB')
 
 #---------------------------------#
 # 	Seleccionar FEATURES		  #
