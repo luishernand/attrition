@@ -326,6 +326,14 @@ if upload_file  is not None:
 	#predcciones classificación- probabailidad
 	X1 = data[FEATURES_CLASSIF]
 	y1 = data[TARGET_classifier]
+	
+	classifier = XGBClassifier(colsample_bylevel=0.8865741642101924, colsample_bytree=1.0,
+              learning_rate=0.013622118381700795, max_depth=11,
+              min_child_weight=0.6205465771093738, n_estimators=877, n_jobs=-1,
+              reg_alpha=0.01386336444764391, reg_lambda=3.113947886074155,
+              subsample=0.566692814245426, use_label_encoder=False,
+              verbosity=0).fit(X1)
+	
 	y_pred = classifier.predict(X1)	
 	y_proba = classifier.predict_proba(data[FEATURES_CLASSIF])
 
@@ -333,6 +341,14 @@ if upload_file  is not None:
 	#predcciones regression prediccion de los días
 	X2 = data[FEATURES_REG]
 	y2 = data[TARGET_reg]
+	reg = XGBRegressor(colsample_bylevel=0.8865741642101924, colsample_bytree=1.0,
+              learning_rate=0.013622118381700795, max_depth=11,
+              min_child_weight=0.6205465771093738, n_estimators=877, n_jobs=-1,
+              reg_alpha=0.01386336444764391, reg_lambda=3.113947886074155,
+              subsample=0.566692814245426, use_label_encoder=False,
+              verbosity=0).fit(X2)
+
+	
 	y_reg = reg.predict(X2)
 
 	# Metrica de los modelos Accueacy y r2 score
