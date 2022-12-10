@@ -1,12 +1,12 @@
 #--------------------------#
-#		Librerias		   #
+#		Librerias  #
 #--------------------------#
 import streamlit as st 
 import pandas as pd 
-#import plotly.express as px 
+import plotly.express as px 
 import numpy as np
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 from xgboost import XGBClassifier
 from xgboost import XGBRegressor
@@ -15,7 +15,7 @@ import joblib
 from sklearn import metrics
 st.set_option('deprecation.showPyplotGlobalUse', False)
 #---------------------------------#
-# 	Carga de modelos			  #
+# 	Carga de modelos	  #
 #---------------------------------#
 
 #reg = joblib.load('modelo_regression')
